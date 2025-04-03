@@ -12,7 +12,7 @@ async function sendMessage() {
     method: "POST",
     headers: {
         // "Authorization": `Bearer ${process.env.NEXT_PUBLIC_OPENROUTER_API_KEY}`,
-        "Authorization": 'Bearer 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',
+        "Authorization": 'Bearer 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',
         "Content-Type": "application/json"
     },
     body: JSON.stringify({
