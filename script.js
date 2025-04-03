@@ -1,5 +1,3 @@
-const API_KEY = "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";  // Cole sua chave do OpenRouter aqui
-
 async function sendMessage() {
     const input = document.getElementById("user-input");
     const message = input.value.trim();
@@ -13,7 +11,7 @@ async function sendMessage() {
     const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
     method: "POST",
     headers: {
-        "Authorization": `Bearer ${API_KEY}`,
+        "Authorization": `Bearer ${process.env.OPENROUTER_API_KEY}`,
         "Content-Type": "application/json"
     },
     body: JSON.stringify({
